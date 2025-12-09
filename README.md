@@ -1,6 +1,6 @@
 ## Project Description:
 
-    This application takes a public YouTube video URL and automatically generates a concise summary of its content. It works by downloading the video’s audio, converting the speech to text using an offline transcription model, and then using an offline language model to summarize the transcribed text. The final summary is displayed to the user without requiring any cloud-based services.
+This application takes a public YouTube video URL and automatically generates a concise summary of its content. It works by downloading the video’s audio, converting the speech to text using an offline transcription model, and then using an offline language model to summarize the transcribed text. The final summary is displayed to the user without requiring any cloud-based services.
 
 
 ## Setup and Installation Instructions:
@@ -30,8 +30,12 @@
     https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/tree/main
 
 - Download the Whisper Model if it not there using the below code and then place it in the wishper_model Folder for speech to text recognition. Copy the "base.pt" file into wishper folder.
-    ```python
+    - Install the whisper library
+    ```bash
     pip install openai-whisper
+    ```
+    - Download the Model
+    ```python
     import whisper
     model = whisper.load_model("base", download_root="wishper_model/")
     ```
@@ -42,7 +46,9 @@
     - Make sure that name of that text file file is "cookie.txt"
 
 - Once the above all steps were completed, then strat this application using the below command 
-    python app.py
+```python
+python app.py
+```
 
 - Copy and Paste the localhost address "http://127.0.0.1:5000" in the browser URL and the provide the Https YouTube URL and then click submit, it will provide the title for that video and the summary of that video.
 
@@ -91,8 +97,8 @@ OR
 
 
 ## Demo Video:
-    Here I have provided the Drive Link for that Video
-        https://drive.google.com/file/d/1LQGWQoLQOylgN22VpOVIz2nyiZIthG0C/view?usp=sharing
+Here I have provided the Drive Link for that Video
+[DEMO VIDEO](https://drive.google.com/file/d/1LQGWQoLQOylgN22VpOVIz2nyiZIthG0C/view?usp=sharing)
 
 
 
